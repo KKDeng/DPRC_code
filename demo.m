@@ -11,8 +11,6 @@ X=fea';y=gnd;
 
 num=50;
 
-
-
 for j=3:6
     sum_accuracy_DPRC = 0; sum_accuracy_src = 0; 
     for k=1:num
