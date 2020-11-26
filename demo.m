@@ -1,7 +1,10 @@
 clear
 addpath('lib');
 addpath('algorithm');
-load('dataset\Yale_32x32.mat');
+
+Data_name = 'Yale';  % or ORL
+
+load(['dataset\',Data_name,'_32x32.mat' ]);
 
 X=fea';y=gnd;
 
@@ -14,7 +17,7 @@ for j=3:6
     sum_accuracy_DPRC = 0; sum_accuracy_src = 0; 
     for k=1:num
         fprintf('         number of samples per class:%d---the %d times\n',j,k)
-        load(['dataset\Yalesplit\',num2str(j),'train\',num2str(k),'.mat']);
+        load(['dataset\',Data_name,'split\',num2str(j),'train\',num2str(k),'.mat']);
         testIdx = int16(testIdx); trainIdx = int16(trainIdx);
         
         TestSet.X=X(:,testIdx);TestSet.y=y(testIdx)';
