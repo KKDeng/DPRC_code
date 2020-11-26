@@ -6,7 +6,7 @@ load('dataset\Yale_32x32.mat');
 X=fea';y=gnd;
 
 
-num=10;
+num=50;
 
 
 
