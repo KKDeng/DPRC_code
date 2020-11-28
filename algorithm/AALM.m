@@ -2,8 +2,8 @@ function [H,P]=AALM(DataSet,options)
 
 %% Approximated augmented Lagrangian method for solving the following problem
 %
-%             min |H-HZ|_F+eta |Z|_F + lambda tr(P^T(Sb-nu St)P)
-%             s.t. P^TX=H, P^TP=I
+%             min |H-HZ|_F+ eta |Z|_F + lambda tr(P^T(Sb-nu St)P)
+%             s.t. P^TX=H, P^TP=I，diag(Z) = 0.
 %
 %% --------------------------------parameter--------------------------------
 d = options.reduce_dimension;
